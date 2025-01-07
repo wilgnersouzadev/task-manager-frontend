@@ -28,23 +28,51 @@ function Dashboard() {
     navigate("/login");
   };
 
+  const getStatusClass = (status) => {
+    switch (status) {
+      case "completed":
+        return "task-completed";
+      case "pending":
+        return "task-pending";
+      case "overdue":
+        return "task-overdue";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div className="dashboard-container">
       <header className="dashboard-header">
         <h1>Dashboard</h1>
-        <button className="logout-button" onClick={handleLogout}>
-          Logout
-        </button>
+          <button className="logout-button" onClick={handleLogout}>
+            Logout
+          </button>
       </header>
       <section className="tasks-section">
         <h2>Your Tasks</h2>
         <ul className="task-list">
           {tasks.map((task) => (
-            <li key={task.id} className="task-item">
+            <li
+              key={task.id}
+              className={`task-item ${getStatusClass(task.status)}`}
+            >
               {task.title}
             </li>
           ))}
         </ul>
+
+        <div className="task-legend">
+          <div className="legend-item">
+            <span className="color-box completed"></span> Completed
+          </div>
+          <div className="legend-item">
+            <span className="color-box pending"></span> Pending
+          </div>
+          <div className="legend-item">
+            <span className="color-box overdue"></span> Overdue
+          </div>
+        </div>
       </section>
     </div>
   );

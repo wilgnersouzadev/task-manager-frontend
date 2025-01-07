@@ -87,3 +87,56 @@ html {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+.task-item {
+  list-style: none;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
+.task-completed {
+  background-color: #28a745;
+}
+
+.task-pending {
+  background-color: #ffc107;
+}
+
+.task-overdue {
+  background-color: #dc3545;
+}
+
+.task-legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.legend-item {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.completed {
+  background-color: #28a745;
+}
+
+.pending {
+  background-color: #ffc107;
+}
+
+.overdue {
+  background-color: #dc3545;
+}
