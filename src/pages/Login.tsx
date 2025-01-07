@@ -9,6 +9,10 @@ function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    if (!email || !password) {
+        alert("All fields are required.");
+        return;
+      }
     try {
       const response = await axios.post(
         "http://localhost:3000/api/auth/login",
@@ -33,12 +37,14 @@ function Login() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <button onClick={handleLogin}>Login</button>
         <p className="register-text">
