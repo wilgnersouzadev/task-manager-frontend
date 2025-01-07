@@ -1,67 +1,66 @@
 .tasks-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-  }
-  
-  .task-card {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .task-card.completed {
-    background-color: #d4edda;
-    border-left: 6px solid #28a745;
-  }
-  
-  .task-card.in-progress {
-    background-color: #fff3cd;
-    border-left: 6px solid #ffc107;
-  }
-  
-  .task-card.pending {
-    background-color: #f8d7da;
-    border-left: 6px solid #dc3545;
-  }
-  
-  .task-legend {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .legend-item {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-  }
-  
-  .legend-item .color-box {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    border-radius: 3px;
-  }
-  
-  .legend-completed .color-box {
-    background-color: #28a745;
-  }
-  
-  .legend-in-progress .color-box {
-    background-color: #ffc107;
-  }
-  
-  .legend-pending .color-box {
-    background-color: #dc3545;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.task-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card.completed {
+  background-color: #d4edda;
+  border-left: 6px solid #28a745;
+}
+
+.task-card.in-progress {
+  background-color: #fff3cd;
+  border-left: 6px solid #ffc107;
+}
+
+.task-card.pending {
+  background-color: #f8d7da;
+  border-left: 6px solid #dc3545;
+}
+
+.task-legend {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.legend-item .color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.legend-completed .color-box {
+  background-color: #28a745;
+}
+
+.legend-in-progress .color-box {
+  background-color: #ffc107;
+}
+
+.legend-pending .color-box {
+  background-color: #dc3545;
+}
