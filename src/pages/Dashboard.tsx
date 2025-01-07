@@ -1,37 +1,51 @@
-import React from 'react';
-import './styles/Dashboard.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./styles/Dashboard.css";
 
 function Dashboard() {
+  const [tasks, setTasks] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const token = localStorage.getItem("token");
+      try {
+        const response = await axios.get("http://localhost:3000/api/tasks", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setTasks(response.data);
+      } catch (error) {
+        alert("Session expired. Please login again.");
+        navigate("/login");
+      }
+    };
+    fetchTasks();
+  }, [navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
   return (
     <div className="dashboard-container">
       <header className="dashboard-header">
         <h1>Dashboard</h1>
-        <button className="logout-button">Logout</button>
+        <button className="logout-button" onClick={handleLogout}>
+          Logout
+        </button>
       </header>
-      <main className="dashboard-main">
-        <section className="stats-section">
-          <div className="stat-card">
-            <h2>Total Tasks</h2>
-            <p>42</p>
-          </div>
-          <div className="stat-card">
-            <h2>Completed</h2>
-            <p>30</p>
-          </div>
-          <div className="stat-card">
-            <h2>Pending</h2>
-            <p>12</p>
-          </div>
-        </section>
-        <section className="tasks-section">
-          <h2>Recent Tasks</h2>
-          <ul className="task-list">
-            <li className="task-item">Task 1 - Complete API integration</li>
-            <li className="task-item">Task 2 - Frontend UI update</li>
-            <li className="task-item">Task 3 - Database migration</li>
-          </ul>
-        </section>
-      </main>
+      <section className="tasks-section">
+        <h2>Your Tasks</h2>
+        <ul className="task-list">
+          {tasks.map((task) => (
+            <li key={task.id} className="task-item">
+              {task.title}
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }
