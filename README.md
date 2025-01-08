@@ -15,12 +15,12 @@
 
 ## 🛠️ Tecnologias Utilizadas
 
-- [React](https://react.dev/learn)![](https://img.shields.io/badge/--0D0D0D.svg?style=flat&logoColor=61dafb&logo=react "React.Js")
-- [React Router](https://reactrouter.com/home)![](https://img.shields.io/badge/--FAFAFF.svg?style=flat&logoColor=ed0c0c&logo=reactrouter "React Router")
-- [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)![](https://img.shields.io/badge/--FAFAFF.svg?style=flat&logoColor=7952B3&logo=redux "Redux")
-- [Axios](https://axios-http.com/ptbr/docs/intro)![](https://img.shields.io/badge/--FAFAFF.svg?style=flat&logoColor=7952B3&logo=axios "Axios")
+- [React](https://react.dev/learn) ![](https://img.shields.io/badge/--0D0D0D.svg?style=flat&logoColor=61dafb&logo=react "React.Js")
+- [React Router](https://reactrouter.com/home) ![](https://img.shields.io/badge/--FAFAFF.svg?style=flat&logoColor=ed0c0c&logo=reactrouter "React Router")
+- [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started) ![](https://img.shields.io/badge/--FAFAFF.svg?style=flat&logoColor=7952B3&logo=redux "Redux")
+- [Axios](https://axios-http.com/ptbr/docs/intro) ![](https://img.shields.io/badge/--FAFAFF.svg?style=flat&logoColor=7952B3&logo=axios "Axios")
 - [CSS](https://www.w3schools.com/css/) (Estilização personalizada para cada tela) ![](https://img.shields.io/badge/--1572b6.svg?style=flat&logoColor=FAFAFF&logo=css3 "CSS")
-- [Vite](https://vite.dev/guide/)![](https://img.shields.io/badge/--FAFAFF.svg?style=flat&logoColor=f0cb11&logo=vite)
+- [Vite](https://vite.dev/guide/) ![](https://img.shields.io/badge/--FAFAFF.svg?style=flat&logoColor=f0cb11&logo=vite)
 
 ## 📦 Instalação e Configuração do Frontend
 
